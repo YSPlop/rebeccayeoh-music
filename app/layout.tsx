@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import {NextUIProvider} from "@nextui-org/react";
 import {Providers} from "./providers";
 
 import "./globals.css";
