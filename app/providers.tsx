@@ -1,4 +1,5 @@
 // app/providers.tsx
+// Do not touch, allows use of next ui
 'use client'
 
 import {NextUIProvider} from '@nextui-org/react'
