@@ -1,5 +1,5 @@
 "use client";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuToggle, NavbarMenu, NavbarMenuItem} from "@nextui-org/react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo";
 import { useState } from "react";
 import BentoCard from "./BentoCard";
@@ -26,26 +26,26 @@ const NavBar: React.FC = () => {
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
       </NavbarContent>
 
-      
+
       {/* logo */}
       <NavbarContent className=" pr-3" justify="center">
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-inherit">REBECCA MUSIC</p>
+
         </NavbarBrand>
       </NavbarContent>
 
       {/* Desktop Navigation */}
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-          {navLinks.map(({ href, label }) => (
-              <NavbarItem key={href}>
-                <Link href={href} className="relative group text-inherit no-underline">
-                  {label}
-                  {/* Simple underline on hover */}
-                  <span className="absolute left-0 bottom-0 w-full h-[2px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
-                </Link>
-              </NavbarItem>
-          ))}
+        {navLinks.map(({ href, label }) => (
+          <NavbarItem key={href}>
+            <Link href={href} className="relative group text-inherit no-underline">
+              {label}
+              {/* Simple underline on hover */}
+              <span className="absolute left-0 bottom-0 w-full h-[2px] bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
       {/* <NavbarContent justify="end">
