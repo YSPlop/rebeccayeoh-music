@@ -1,10 +1,12 @@
 "use client";
 
+import ContactForm from "../../components/ContactForm";
+
 const ContactUs: React.FC = () => {
 
     return (
         <div>
-             {/*your code here*/}
+             <ContactForm/>
         </div>
     );
 
