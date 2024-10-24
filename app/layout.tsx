@@ -5,6 +5,7 @@ import {Providers} from "./providers";
 import "./globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import GoogleCaptchaWrapper from "./GoogleRecaptchaWrapper";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,11 +33,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>
-          <NavBar />
-          {children}
-          <Footer />
-        </Providers>
+        <div className="bg-background-pink h-screen">
+          <Providers>
+            <GoogleCaptchaWrapper>
+              <NavBar />
+                {children}
+              <Footer /> 
+            </GoogleCaptchaWrapper>   
+          </Providers>
+        </div>
       </body>
     </html>
   );
