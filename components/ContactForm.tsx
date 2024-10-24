@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import styles from '../styles/contactform.module.css';
 import { sendEmail } from '../utils/send-mail'; // Import the sendEmail function
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import axios from 'axios';
+
 
 const ContactForm: React.FC = () => {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     mobile: '',
     message: '',
   });
+
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   // const [submitted, setSubmitted] = useState(false);
   const introMessage = "We're happy to help! If you have order status-related questions, please check our page. If you still need help, we'll respond to your message below."
@@ -26,6 +32,31 @@ const ContactForm: React.FC = () => {
     if (!formData.name || !formData.email || !formData.mobile) {
       alert('Please fill in all required fields.');
       return;
+    }
+
+    if (!executeRecaptcha) {
+      console.log("not available to execute recaptcha");
+      return;
+    }
+
+    const gRecaptchaToken = await executeRecaptcha('inquirySubmit');  
+
+    const response = await axios({
+      method: "post",
+      url: "/api/recaptchaSubmit",
+      data: {
+        gRecaptchaToken,
+      },
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response?.data?.success === true) {
+      console.log(`Success with score: ${response?.data?.score}`);
+    } else {
+      console.log(`Failure with score: ${response?.data?.score}`);
     }
 
     try {

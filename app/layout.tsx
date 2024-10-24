@@ -33,15 +33,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="bg-background-pink h-screen">
-          <Providers>
-            <GoogleCaptchaWrapper>
-              <NavBar />
-                {children}
-              <Footer /> 
-            </GoogleCaptchaWrapper>   
-          </Providers>
-        </div>
+        <GoogleCaptchaWrapper>
+          <div className="bg-background-pink h-screen">
+            <Providers>
+              
+                <NavBar />
+                  {children}
+                <Footer /> 
+              
+            </Providers>
+          </div>
+      </GoogleCaptchaWrapper>   
       </body>
     </html>
   );
