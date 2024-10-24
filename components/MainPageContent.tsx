@@ -46,15 +46,25 @@ const ContentContainer = styled.div`
 
 const InfoCardsContainer = styled.div`
     display: flex;
-    flex-direction: column; /* Stack cards on smaller screens */
-    align-items: center; /* Center cards horizontally */
-    justify-content: center; /* Center cards vertically */
-    width: 100%; /* Full width */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    justify-content: center; /* Center cards horizontally */
     gap: 1rem; /* Space between cards */
+    width: 100%; /* Full width */
 
+    /* Mobile view - two cards per row */
+    @media (max-width: 768px) {
+        & > div {
+            width: calc(50% - 1rem); /* Two cards per row */
+            height: 18rem; /* Fixed height for square shape */
+            display: flex; /* Ensure flex properties work */
+            flex-direction: column; /* Stack image and text */
+            align-items: center; /* Center content */
+        }
+    }
+
+    /* Larger screens */
     @media (min-width: 768px) {
         flex-direction: row; /* Change to row on larger screens */
-        justify-content: center; /* Center cards horizontally */
         gap: 2rem; /* Space between cards */
     }
 `;

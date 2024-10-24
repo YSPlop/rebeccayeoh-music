@@ -25,10 +25,16 @@ const CardContainer = styled.div`
 
 const ImageCard = styled.img`
     width: 100%;   /* Full width of the card */
-    height: 15rem; /* Fixed height for the image */
+    height: auto;  /* Let the height be automatic to keep aspect ratio */
+    max-height: 15rem; /* Set a max height to maintain square shape */
     object-fit: cover; 
     margin-bottom: 0.75rem;
-    border-radius: 0.75rem;  
+    border-radius: 0.75rem;  /* Rounded corners for the image */
+
+    /* Mobile view adjustments */
+    @media (max-width: 768px) {
+        max-height: 8rem; /* Smaller height for mobile */
+    }
 `;
 
 const InfoTextWrapper = styled.div`
@@ -40,8 +46,14 @@ const InfoTextWrapper = styled.div`
 `;
 
 const InfoText = styled.span`
+    text-align: center;
     color: #4B5563; /* Tailwind's gray-600 */
     font-size: 1rem;
+
+    /* Mobile view adjustments */
+    @media (max-width: 768px) {
+        font-size: 0.875rem; /* Smaller font size for mobile */
+    }
 `;
 
 interface InfoCardProps {
