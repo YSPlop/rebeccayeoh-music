@@ -1,5 +1,4 @@
 "use client";
-import ContactForm from "../components/ContactForm";
 import MainPageContent from "../components/MainPageContent";
 
 
