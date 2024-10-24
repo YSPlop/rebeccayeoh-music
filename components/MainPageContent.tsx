@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ParallaxContainer = styled.div`
     position: relative;
-    height: 900px; 
+    height: 100vh; 
     overflow: hidden;
     background-image: url('/images/namecard.jpg'); 
     background-attachment: fixed; /* Parallax effect */
