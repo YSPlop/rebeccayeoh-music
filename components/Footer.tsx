@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.textContainer}>
-        <p>© 2024 Rebecca Yeoh Music</p>
+        <p>“Where words fail, music speaks.” - Hans Christian Anderson </p>
       </div>
       <div className={styles.svgContainer}>
         <Logo />
