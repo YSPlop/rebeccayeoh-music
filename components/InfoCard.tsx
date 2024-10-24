@@ -28,7 +28,7 @@ const ImageCard = styled.img`
     height: 15rem; /* Fixed height for the image */
     object-fit: cover; 
     margin-bottom: 0.75rem;
-    border-radius: 0.75rem;  /* Rounded corners for the image */
+    border-radius: 0.75rem;  
 `;
 
 const InfoTextWrapper = styled.div`

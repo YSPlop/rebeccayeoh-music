@@ -33,6 +33,32 @@ const OverlayText = styled.div`
     z-index: 1;
 `;
 
+const ContentContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    justify-content: center; /* Center content vertically */
+    width: 100%;
+    min-height: 10vh; /* Ensure this takes at least some height */
+    padding: 2rem; /* Add padding for content */
+    background-color: #fce4f1; /* Using pink-100 */
+`;
+
+const InfoCardsContainer = styled.div`
+    display: flex;
+    flex-direction: column; /* Stack cards on smaller screens */
+    align-items: center; /* Center cards horizontally */
+    justify-content: center; /* Center cards vertically */
+    width: 100%; /* Full width */
+    gap: 1rem; /* Space between cards */
+
+    @media (min-width: 768px) {
+        flex-direction: row; /* Change to row on larger screens */
+        justify-content: center; /* Center cards horizontally */
+        gap: 2rem; /* Space between cards */
+    }
+`;
+
 const MainPageContent: React.FC = () => {
     const introMessage = "Are you interested in taking up piano lessons, but you've never had time before? Or getting your children into a music program for extra curricular activities? We take beginners of all ages!";
 
@@ -45,7 +71,7 @@ const MainPageContent: React.FC = () => {
                 </OverlayText>
             </ParallaxContainer>
 
-            <div className="mx-auto w-[100%] md:w-[80%] bg-pink-100 h-screen items-center pt-20">
+            <ContentContainer>
                 <h1 className="text-2xl font-bold text-gray-800 text-center px-10 mb-8">
                     {introMessage}
                 </h1>
@@ -61,7 +87,8 @@ const MainPageContent: React.FC = () => {
                 <p className="text-lg text-gray-600 mb-4 text-center">
                     <span className="font-bold">Students will learn:</span>
                 </p>
-                <div className="flex flex-col md:flex-row justify-center md:space-x-8 mb-16">
+
+                <InfoCardsContainer>
                     <InfoCard
                         imageSrc="/images/student-teacher.jpg"
                         altText="Student Teacher"
@@ -85,8 +112,8 @@ const MainPageContent: React.FC = () => {
                         altText="Theory and Fundamentals"
                         description="Theory and fundamentals of music"
                     />
-                </div>
-            </div>
+                </InfoCardsContainer>
+            </ContentContainer>
         </>
     );
 };

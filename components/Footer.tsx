@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.textContainer}>
-        <p>“Where words fail, music speaks.” - Hans Christian Anderson </p>
+        <p>“<span className="italic">Where words fail, music speaks.</span>” - Hans Christian Anderson </p>
       </div>
       <div className={styles.svgContainer}>
         <Logo />
