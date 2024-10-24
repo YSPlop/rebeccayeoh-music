@@ -1,0 +1,29 @@
+/* components/Footer.module.css */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFE3E2;
+  padding: 10px 20px; /* Makes the footer thin */
+  height: 50px; /* Adjust height as needed */
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a small shadow */
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.textContainer {
+  font-size: 14px; /* Small text */
+}
+
+.svgContainer {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: #000; /* Set the color of the SVG icon */
+}

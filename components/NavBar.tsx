@@ -1,6 +1,6 @@
 "use client";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
-import { AcmeLogo } from "./AcmeLogo";
+import { Logo } from "./Logo";
 import { useState } from "react";
 import BentoCard from "./BentoCard";
 
@@ -30,7 +30,7 @@ const NavBar: React.FC = () => {
       {/* logo */}
       <NavbarContent className=" pr-3" justify="center">
         <NavbarBrand>
-          <AcmeLogo />
+          <Logo />
 
         </NavbarBrand>
       </NavbarContent>
