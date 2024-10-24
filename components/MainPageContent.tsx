@@ -3,7 +3,7 @@
 const MainPageContent: React.FC = () => {
 
     return (
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1700px] bg-pink-100 h-full flex flex-col items-center pt-32">
+        <div className="mx-auto w-[100%] md:w-[80%] bg-pink-100 h-full items-center pt-32">
             <h1 className="text-2xl font-bold text-gray-800 text-center px-10 mb-8">
                 Are you interested in taking up piano lessons, but you've never had time before?
                 Or getting your children into a music program for extra curricular activities?
@@ -18,7 +18,7 @@ const MainPageContent: React.FC = () => {
                 Lessons are based in Lane Cove, the lower north shore of Sydney. Non school aged students &
                 adults have the flexibility of having lessons in the comfort of their own home.
             </p>
-            <div className="flex justify-center space-x-8 mb-16">
+            <div className="flex flex-col md:flex-row justify-center space-x-8 mb-16">
                 <div className="flex flex-col items-center">
                     <img src="/path/to/image1.jpg" alt="Description 1" className="w-32 h-32 object-cover mb-2" />
                     <span className="text-center text-gray-600">Caption for Image 1</span>
