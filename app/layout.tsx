@@ -36,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <GoogleCaptchaWrapper>
-          <div className="bg-background-pink h-screen">
+          <div className="bg-background-pink">
             <Providers>
               
                 <NavBar />

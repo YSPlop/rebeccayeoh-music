@@ -17,9 +17,9 @@ const TeamComponent: FC<TeamComponentProps> = ({ text, name, imageUrl }) => {
           <h2 className="text-2xl font-semibold mb-4">
             {name}
           </h2>
-          <p className="text-gray-800 mb-6">
+          <div className="text-gray-800 mb-6">
             {text}
-          </p>
+          </div>
         </div>
 
         {/* Right side: Image */}
