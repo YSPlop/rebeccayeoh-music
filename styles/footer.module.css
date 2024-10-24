@@ -1,5 +1,4 @@
 /* components/Footer.module.css */
-
 .footer {
   display: flex;
   justify-content: space-between;
@@ -10,8 +9,8 @@
   box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a small shadow */
   position: fixed;
   width: 100%;
-  margin-top: 10000px;
   bottom: 0;
+  /* Remove margin-bottom as it doesn't affect the content above */
 }
 
 .textContainer {
@@ -27,4 +26,9 @@
   width: 24px;
   height: 24px;
   fill: #000; /* Set the color of the SVG icon */
+}
+
+.contentContainer {
+  padding-bottom: 50px; /* Adds space so content doesn't overlap with footer */
+  margin-bottom: 50px; /* Ensures 200px space above footer */
 }
