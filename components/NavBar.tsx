@@ -26,10 +26,12 @@ const NavBar: React.FC = () => {
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
       </NavbarContent>
 
+      
+      {/* logo */}
       <NavbarContent className=" pr-3" justify="center">
         <NavbarBrand>
           <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit">REBECCA MUSIC</p>
         </NavbarBrand>
       </NavbarContent>
 
