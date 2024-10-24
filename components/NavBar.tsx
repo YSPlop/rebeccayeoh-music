@@ -19,6 +19,7 @@ const NavBar: React.FC = () => {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
+      className="bg-white"
     >
 
       {/* Hamburger menu */}
