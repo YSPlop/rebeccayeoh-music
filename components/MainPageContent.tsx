@@ -1,9 +1,10 @@
 "use client";
 import styled from 'styled-components';
+import InfoCard from './InfoCard'; // Importing the InfoCard component
 
 const ParallaxContainer = styled.div`
     position: relative;
-    height: 100vh; 
+    height: 90vh; 
     overflow: hidden;
     background-image: url('/images/namecard.jpg'); 
     background-attachment: fixed; /* Parallax effect */
@@ -24,19 +25,12 @@ const ParallaxContainer = styled.div`
 
 const OverlayText = styled.div`
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #000; /* Text color */
     text-align: center;
     z-index: 1;
-`;
-
-const ImageCard = styled.img`
-    width: 16rem;  
-    height: 16rem; 
-    object-fit: cover; 
-    margin-bottom: 0.5rem;
 `;
 
 const MainPageContent: React.FC = () => {
@@ -68,30 +62,29 @@ const MainPageContent: React.FC = () => {
                     <span className="font-bold">Students will learn:</span>
                 </p>
                 <div className="flex flex-col md:flex-row justify-center md:space-x-8 mb-16">
-                    <div className="flex flex-col items-center">
-                        <ImageCard src="/images/student-teacher.jpg" alt="Description 1" />
-                        <span className="text-center text-gray-600">
-                            How to read and play music <br /> (classical, contemporary and fun songs)
-                        </span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <ImageCard src="/images/theory.jpg" alt="Description 2" />
-                        <span className="text-center text-gray-600">
-                            General knowledge <br /> (about music, including composers)
-                        </span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <ImageCard src="/images/theory.jpg" alt="Description 3" />
-                        <span className="text-center text-gray-600">
-                            Aural skills <br /> (pitch - listening and singing and rhythm)
-                        </span>
-                    </div>
-                    <div className="flex flex-col items-center">
-                        <ImageCard src="/images/theory.jpg" alt="Description 4" />
-                        <span className="text-center text-gray-600">
-                            Theory and fundamentals of music
-                        </span>
-                    </div>
+                    <InfoCard
+                        imageSrc="/images/student-teacher.jpg"
+                        altText="Student Teacher"
+                        description="How to read and play music"
+                        extraText="(classical, contemporary and fun songs)"
+                    />
+                    <InfoCard
+                        imageSrc="/images/theory.jpg"
+                        altText="Theory"
+                        description="General knowledge"
+                        extraText="(about music, including composers)"
+                    />
+                    <InfoCard
+                        imageSrc="/images/student-teacher.jpg"
+                        altText="Aural Skills"
+                        description="Aural skills"
+                        extraText="(pitch - listening and singing and rhythm)"
+                    />
+                    <InfoCard
+                        imageSrc="/images/theory.jpg"
+                        altText="Theory and Fundamentals"
+                        description="Theory and fundamentals of music"
+                    />
                 </div>
             </div>
         </>
