@@ -2,12 +2,12 @@
 
 const MainPageContent: React.FC = () => {
 
+    const introMessage = "Are you interested in taking up piano lessons, but you've never had time before? Or getting your children into a music program for extra curricular activities? We take beginners of all ages!";
+
     return (
         <div className="mx-auto w-[100%] md:w-[80%] bg-pink-100 h-full items-center pt-32">
             <h1 className="text-2xl font-bold text-gray-800 text-center px-10 mb-8">
-                Are you interested in taking up piano lessons, but you've never had time before?
-                Or getting your children into a music program for extra curricular activities?
-                We take beginners of all ages!
+                {introMessage}
             </h1>
             <p className="text-lg text-gray-600 mb-4 text-center">
                 <span className="italic">Rebecca Yeoh Music</span> offers students an introduction to music in many ways!
