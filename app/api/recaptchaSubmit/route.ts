@@ -1,9 +1,7 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
 
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function POST(request: Request, response: Response) {
+export async function POST(request: Request) {
     const secretKey = process.env.RECAPTCHA_SERVER_SECRET_KEY;
 
     const postData = await request.json();
