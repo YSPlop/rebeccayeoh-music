@@ -10,7 +10,8 @@ const ContactForm: React.FC = () => {
     message: '',
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
+  const introMessage = "We're happy to help! If you have order status-related questions, please check our page. If you still need help, we'll respond to your message below."
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -31,7 +32,7 @@ const ContactForm: React.FC = () => {
       // Use sendEmail to send the form data
       await sendEmail(formData);
 
-      setSubmitted(true);
+      // setSubmitted(true);
       setFormData({
         name: '',
         email: '',
@@ -48,9 +49,7 @@ const ContactForm: React.FC = () => {
     <div className={styles.contactFormContainer}>
       <h2>Contact Us</h2>
       <p>
-        We're happy to help! If you have order status-related questions, please
-        check our <a href="#">Order Tracking</a> page. If you still need help, we'll
-        respond to your message below.
+        {introMessage}
       </p>
       <form onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
