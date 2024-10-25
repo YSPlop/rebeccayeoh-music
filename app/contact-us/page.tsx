@@ -1,6 +1,6 @@
 "use client";
 
-import ContactForm from "../../components/ContactForm";``
+import ContactForm from "../../components/ContactForm";
 import Testimonials from "../../components/Testimonials";
 
 const ContactUs: React.FC = () => {
